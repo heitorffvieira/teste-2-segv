@@ -214,6 +214,7 @@
     }
 
     .container-mei {
+        background: radial-gradient(circle, #004080 0%, #00274d 65%, #001a33 100%);
         margin: 0;
         display: block;
         padding: 5vh;
@@ -247,6 +248,11 @@
 
     .container-10 header {
         padding: 0 5vh;
+    }
+
+    .carousel__item {
+        width: 22vh;
+        height: 17vh;
     }
 
     .c {
@@ -588,6 +594,11 @@
 
     .container-10 header {
         padding: 0 5vh;
+    }
+
+    .carousel__item {
+        width: 22vh;
+        height: 17vh;
     }
 
     .c {
@@ -985,6 +996,11 @@
         padding: 0 5vh;
     }
 
+    .carousel__item {
+        width: 32vh;
+        height: 27vh;
+    }
+
     .c {
         width: 480px;
         height: 260px;
@@ -1311,6 +1327,11 @@
         padding: 0 5vh;
     }
 
+    .carousel__item {
+        width: 40vh;
+        height: 35vh;
+    }
+
     .c {
         width: 520px;
         height: 300px;
@@ -1402,5 +1423,115 @@
     .parallax {
         text-align: center;
         margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200.1px ) and (max-width: 1450px){
+    .cards-container {
+        margin-top: 12vh;
+    }
+
+    .container-8 {
+        display: block;
+        width: 100%;
+        padding: 9vh 5vh;
+    }
+
+    .service-items {
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-item h3 {
+        width: 16rem;
+    }
+
+    .service-item img {
+        width: 45px;
+    }
+
+    .container-8 header {
+        width: auto;
+        text-align: center;
+    }
+
+    .container-8 h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    .container-6 video {
+        width: 40rem;
+        border-radius: 3vh;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1200.1px ) and (max-width: 1410px){
+    .container-4 {
+        padding: var(--padding-section);
+        text-align: center;
+    }
+
+    .texto-container-4 p {
+        text-align: center;
+    }
+
+    #img-tec {
+        display: none;
+    }
+
+    .defensa-itens {
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    }
+
+    .container-11 header {
+        width: 41rem;
+    }
+
+    .content ul li a {
+        border-radius: 30px;
+    }
+
+    .container-2 {
+        padding: 15vh 12vh;
+    }
+
+    .cards-container {
+        margin-top: 12vh;
+    }
+
+    .container-8 {
+        display: block;
+        width: 100%;
+        padding: 9vh 5vh;
+    }
+
+    .service-items {
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-item h3 {
+        width: 16rem;
+    }
+
+    .service-item img {
+        width: 45px;
+    }
+
+    .container-8 header {
+        width: auto;
+        text-align: center;
+    }
+
+    .container-8 h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    .container-6 video {
+        width: 40rem;
+        border-radius: 3vh;
+        height: auto;
     }
 }
