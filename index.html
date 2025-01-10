@@ -31,7 +31,7 @@
                     <li class="item"><a href="#container-10">Parcerias</a></li>
                     <li class="item"><a href="#container-11">Locais</a></li>
                     <li class="item"><a href="#container-4">Soluções</a></li>
-                    <button class="btn" id="btn-menu">Contato</button>
+                    <button class="btn" id="btn-menu" onclick="entrarContato()">Contato</button>
                 </ul>
             </nav>
         </aside>
@@ -48,7 +48,7 @@
             <li class="item-mobile hidden-mobile"><a href="#container-11" onclick="redirecionamento()">Locais</a></li>
             <li class="item-mobile hidden-mobile"><a href="#container-4" onclick="redirecionamento()">Soluções</a></li>
             <div style="display: flex; justify-content: center;">
-                <button class="btn btn-ctt-mobile" id="btn-menu">Contato</button>
+                <button class="btn btn-ctt-mobile" id="btn-menu" onclick="entrarContato()">Contato</button>
             </div>
         </ul>
     </div>
@@ -63,7 +63,7 @@
                 <h1>Tecnologia usada para a segurança e integridade da sua empresa</h1>
                 <p>Oferecemos soluções inovadoras que garantem a proteção do seu negócio.</p>
                 <div class="buttons-container-1">
-                    <button>Entre em contato</button>
+                    <button onclick="entrarContato()">Entre em contato</button>
                     <button id="botao-play"><img src="assets/play-regular-36.png" alt="" onclick="irParaVideo()"></button>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                 <h1 class="hidden">Estrutura Completa</h1>
                 <h3 class="hidden">Criada para atender todas as necessidades dos clientes, a qualquer hora.</h3>
                 <p class="hidden">Garantimos qualidade e desempenho ao máximo, com a confiança e credibilidade que temos com tantos anos no mercado.</p>
-                <button class="hidden-ler">Entre em contato</button>
+                <button class="hidden-ler" onclick="entrarContato()">Entre em contato</button>
             </div>
         </div>
     </section>
@@ -224,7 +224,7 @@
             <h1 class="hidden">Proteção com Inteligência Artificial</h1>
             <h3 class="hidden">Segurança inovadora para um mundo em constante evolução.</h3>
             <p class="hidden">Oferecemos soluções de segurança avançadas que utilizam Inteligência Artificial para proteger seus dados, antecipar ameaças e garantir tranquilidade em um ambiente digital cada vez mais desafiador.</p>
-            <button class="hidden-ler">Entre em contato</button>
+            <button class="hidden-ler" onclick="entrarContato()">Entre em contato</button>
         </div>
 
     </section>
@@ -299,12 +299,14 @@
                 </div>
             </div>
 
-            <div class="pen">
-                <div class="stage">
-                    <div class="element michael" style="background-image: url(https://i.pinimg.com/736x/32/47/74/324774198ede25f228a448e45a7a3ec1.jpg);"></div>
-                    <div class="element franklin" style="background-image: url(assets/intelbras-2.png);"></div>
-                    <div class="element trevor" style="background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/20498721-mitsubishi-marca-logotipo-carro-simbolo-com-nome-vermelho-projeto-japao-automovel-ilustracao-com-preto-fundo-gratis-vetor.jpg);"></div>
-                </div>
+            <div class="carousel">
+                <ul class="carousel__list">
+                  <li class="carousel__item" data-pos="-2"><img src="assets/intelbras-2.png" alt=""></li>
+                  <li class="carousel__item" data-pos="-1"><img src="https://static.vecteezy.com/ti/vetor-gratis/p1/20498721-mitsubishi-marca-logotipo-carro-simbolo-com-nome-vermelho-projeto-japao-automovel-ilustracao-com-preto-fundo-gratis-vetor.jpg" alt=""></li>
+                  <li class="carousel__item" data-pos="0"><img src="assets/intelbras-2.png" alt=""></li>
+                  <li class="carousel__item" data-pos="1"><img src="https://static.vecteezy.com/ti/vetor-gratis/p1/20337506-coca-cola-logotipo-coca-cola-icone-livre-gratis-vetor.jpg" alt=""></li>
+                  <li class="carousel__item" data-pos="2"><img src="https://static.vecteezy.com/ti/vetor-gratis/p1/20337506-coca-cola-logotipo-coca-cola-icone-livre-gratis-vetor.jpg" alt=""></li>
+                </ul>
             </div>
 
         </section>
