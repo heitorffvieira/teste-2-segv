@@ -1,3 +1,4 @@
+
 document.addEventListener('scroll', function () {
     const menu = document.getElementById('cabecalho');
     const itensMenu = document.getElementById('menu-cabecalho');
@@ -19,6 +20,11 @@ document.addEventListener('scroll', function () {
         logo.classList.remove('logo-sticky');
     }
 });
+
+function entrarContato(){
+    let zap = 'https://wa.me/+5579996422951'
+    window.open(zap, '_blank')
+}
 
 const elementosScroll = document.querySelectorAll('.hidden');
 const scrollLerMais = document.querySelectorAll('.hidden-ler');
@@ -92,17 +98,6 @@ menuItems.forEach((item, index) => {
     });
 });
 
-$('.element').each(function() {
-    $(this).mouseover(function() {
-        $(this).addClass('activee');
-      $('.stage').children('.element').not('.activee').addClass('inactive');
-    });
-    $(this).mouseleave(function() {
-        $(this).removeClass('activee');
-        $('.stage').children('.element').not('.activee').removeClass('inactive');
-    });
-});
-
 const menuuItems = document.querySelectorAll('.container-ul ul li a');
 
 menuuItems.forEach(item => {
@@ -133,6 +128,49 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 });
+
+const state = {};
+const carouselList = document.querySelector('.carousel__list');
+const carouselItems = document.querySelectorAll('.carousel__item');
+const elems = Array.from(carouselItems);
+
+carouselList.addEventListener('click', function (event) {
+    var newActive = event.target.closest('.carousel__item');
+  
+    if (!newActive || newActive.classList.contains('carousel__item_active')) {
+      return;
+    }
+  
+    update(newActive);
+  });  
+
+const update = function(newActive) {
+  const newActivePos = newActive.dataset.pos;
+
+  const current = elems.find((elem) => elem.dataset.pos == 0);
+  const prev = elems.find((elem) => elem.dataset.pos == -1);
+  const next = elems.find((elem) => elem.dataset.pos == 1);
+  const first = elems.find((elem) => elem.dataset.pos == -2);
+  const last = elems.find((elem) => elem.dataset.pos == 2);
+  
+  current.classList.remove('carousel__item_active');
+  
+  [current, prev, next, first, last].forEach(item => {
+    var itemPos = item.dataset.pos;
+
+    item.dataset.pos = getPos(itemPos, newActivePos)
+  });
+};
+
+const getPos = function (current, active) {
+  const diff = current - active;
+
+  if (Math.abs(current - active) > 2) {
+    return -current
+  }
+
+  return diff;
+}
 
 const menuPc = document.getElementById('menu-cabecalho');
 const simboloAbrirMenu = document.getElementById('simbolo-menu-mobile');
